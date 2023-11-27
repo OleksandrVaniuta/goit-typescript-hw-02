@@ -6,8 +6,11 @@ type UnionForArray = {
   title: string;
   likes: number;
   accounts: string[];
-  status: string;
-  details?: Object;
+  status: 'open' | 'close';
+  details?: {
+    createAt: Date;
+    updateAt: Date;
+  };
 };
 
 const page1: UnionForArray = {
